@@ -1,0 +1,68 @@
+.shopPageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.shopHeading {
+  padding: var(--spacing-lg) 0;
+}
+
+.the,
+.drop {
+  display: inline-block;
+  font-size: var(--font-size-hero);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.the {
+  margin-right: var(--spacing-md);
+}
+
+.drop {
+  color: var(--color-accent);
+}
+
+.loadingContainer {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  color: var(--color-accent);
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid var(--color-grey-mid);
+  border-top: 5px solid var(--color-accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.loadingContainer p {
+  font-size: var(--font-size-lg);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-lg);
+}

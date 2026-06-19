@@ -1,0 +1,107 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--color-grey-mid);
+  border-radius: var(--border-radius);
+}
+
+.imgWrap {
+  background: var(--color-white);
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: var(--spacing-md);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+}
+
+.title {
+  flex: 1;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+}
+
+.price {
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+.quantityContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.quantityBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  padding: var(--spacing-xs);
+  background-color: var(--color-black);
+  border: 1px solid var(--color-grey-light);
+  border-radius: var(--border-radius);
+}
+
+.quantitySvg {
+  color: var(--color-white);
+}
+
+.quantityBtn:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  cursor: pointer;
+}
+
+.quantityContainer input {
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--color-white);
+  background-color: var(--color-grey-mid);
+  border: 1px solid var(--color-grey-light);
+  border-radius: var(--border-radius);
+}
+
+/* Hide arrows in Chrome, Safari, Edge, and Opera */
+.quantityContainer input[type='number']::-webkit-outer-spin-button,
+.quantityContainer input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide arrows in Firefox */
+.quantityContainer input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.addBtn {
+  padding: var(--spacing-sm);
+  text-transform: uppercase;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  border: 1px solid var(--color-grey-light);
+  border-radius: var(--border-radius);
+}
+
+.addBtn:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  cursor: pointer;
+}

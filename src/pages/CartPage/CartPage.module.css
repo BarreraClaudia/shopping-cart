@@ -1,0 +1,31 @@
+.cartPageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+/*
+-----------
+Empty Cart
+-----------
+*/
+.emptyCart {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-md);
+  height: 60vh;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+.emptyCart h3 {
+  font-size: var(--font-size-xl);
+}
+
+.emptyCart p {
+  color: var(--color-accent);
+  font-size: var(--font-size-lg);
+}
