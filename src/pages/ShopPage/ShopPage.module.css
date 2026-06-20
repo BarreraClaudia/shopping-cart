@@ -16,6 +16,7 @@
 
 .the,
 .drop {
+  font-family: var(--font-display);
   display: inline-block;
   font-size: var(--font-size-hero);
   font-weight: 700;
