@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Plus, Minus, Trash } from 'lucide-react';
 
+import styles from './CartItem.module.css';
+
 function CartItem({
   id,
   image,
@@ -38,28 +40,53 @@ function CartItem({
     }
   }
 
+  function quantityPrice(quantity, price) {
+    const total = quantity * price;
+    return `$${total.toFixed(2)}`;
+  }
+
   return (
-    <div>
-      <img src={image} alt={title} />
-      <h3>{title}</h3>
-      <p>{price}</p>
+    <div className={styles.cartItemContainer}>
+      <div className={styles.imgWrap}>
+        <img src={image} alt={title} className={styles.img} />
+      </div>
       <div>
-        <Minus
-          onClick={() =>
-            quantity === 1
-              ? onRemoveFromCart(id)
-              : onUpdateQuantity(id, quantity - 1)
-          }
-        />
-        <input
-          type="number"
-          min="1"
-          value={displayValue} // Derived state, no useEffect needed
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        <Plus onClick={() => onUpdateQuantity(id, quantity + 1)} />
-        <Trash onClick={() => onRemoveFromCart(id)} />
+        <h3>{title}</h3>
+        <p className={styles.price}>{`$${price.toFixed(2)} each`}</p>
+      </div>
+      <div className={styles.priceAndControls}>
+        <p className={styles.quantityPrice}>{quantityPrice(quantity, price)}</p>
+        <div className={styles.quantityContainer}>
+          <button
+            onClick={() =>
+              quantity === 1
+                ? onRemoveFromCart(id)
+                : onUpdateQuantity(id, quantity - 1)
+            }
+            className={styles.quantityBtn}
+          >
+            <Minus className={styles.quantitySvg} />
+          </button>
+          <input
+            type="number"
+            min="1"
+            value={displayValue}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          />
+          <button
+            onClick={() => onUpdateQuantity(id, quantity + 1)}
+            className={styles.quantityBtn}
+          >
+            <Plus className={styles.quantitySvg} />
+          </button>
+        </div>
+        <button
+          onClick={() => onRemoveFromCart(id)}
+          className={styles.deleteBtn}
+        >
+          <Trash className={styles.deleteSvg} />
+        </button>
       </div>
     </div>
   );

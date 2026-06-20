@@ -1,0 +1,139 @@
+/*
+----------
+container
+----------
+*/
+
+.cartItemContainer {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: var(--spacing-md);
+  align-items: center;
+
+  padding: var(--spacing-md);
+  background-color: var(--color-grey-dark);
+  border-radius: var(--border-radius);
+}
+
+/*
+---------
+image
+---------
+*/
+
+.imgWrap {
+  background: var(--color-white);
+  aspect-ratio: 1;
+  border-radius: var(--border-radius);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: var(--spacing-sm);
+}
+
+/*
+---------------
+price per item
+---------------
+*/
+
+.price {
+  color: var(--color-accent);
+}
+
+/*
+----------------------------------------
+quantity price and controls (right side)
+----------------------------------------
+*/
+
+.priceAndControls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: end;
+  gap: var(--spacing-sm);
+}
+
+.quantityPrice {
+  font-weight: 700;
+}
+
+/*
+-------------------------------------------------
+quantity controls (minus/plus buttons and input)
+-------------------------------------------------
+*/
+
+.quantityContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.quantityBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  padding: var(--spacing-xs);
+  background-color: var(--color-black);
+  border: 1px solid var(--color-grey-light);
+  border-radius: var(--border-radius);
+}
+
+.quantitySvg {
+  color: var(--color-white);
+}
+
+.quantityBtn:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  cursor: pointer;
+}
+
+.quantityContainer input {
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--color-white);
+  background-color: var(--color-grey-mid);
+  border: 1px solid var(--color-grey-light);
+  border-radius: var(--border-radius);
+}
+
+/* Hide arrows in Chrome, Safari, Edge, and Opera */
+.quantityContainer input[type='number']::-webkit-outer-spin-button,
+.quantityContainer input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide arrows in Firefox */
+.quantityContainer input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/*
+--------------
+delete button
+--------------
+*/
+
+.deleteBtn {
+  padding: var(--spacing-xs);
+  color: var(--color-grey-light);
+  background-color: var(--color-grey-dark);
+  border: none;
+}
+
+.deleteBtn:hover {
+  color: var(--color-accent);
+  cursor: pointer;
+}
