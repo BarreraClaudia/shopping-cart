@@ -13,9 +13,9 @@ function App() {
   return (
     <div className={styles.app}>
       <NavBar cartCount={totalItems} />
-      <div>
+      <main className={styles.dynamicContent}>
         <Outlet context={{ cart, addToCart, removeFromCart, updateQuantity }} />
-      </div>
+      </main>
       <Footer />
     </div>
   );
