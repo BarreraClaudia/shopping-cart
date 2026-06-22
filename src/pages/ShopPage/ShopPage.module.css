@@ -12,22 +12,16 @@
 
 .shopHeading {
   padding: var(--spacing-lg) 0;
-}
-
-.the,
-.drop {
   font-family: var(--font-display);
-  display: inline-block;
   font-size: var(--font-size-hero);
   font-weight: 700;
   text-transform: uppercase;
+  line-height: 1.05;
+  word-spacing: -2rem;
 }
 
-.the {
-  margin-right: var(--spacing-md);
-}
-
-.drop {
+.shopHeading span {
+  display: inline-block;
   color: var(--color-accent);
 }
 

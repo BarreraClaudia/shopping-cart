@@ -24,10 +24,9 @@ function CartPage() {
 
   return (
     <div className={styles.cartPageContainer}>
-      <div className={styles.cartHeading}>
-        <span className={styles.spanOne}>Your</span>{' '}
-        <span className={styles.spanTwo}>cart</span>
-      </div>
+      <h2 className={styles.cartHeading}>
+        Your <span>Cart</span>
+      </h2>
       <div className={styles.cartGrid}>
         <div className={styles.itemsContainer}>
           {cart.map((product) => (

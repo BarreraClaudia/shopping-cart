@@ -24,10 +24,9 @@ function ShopPage() {
 
   return (
     <div className={styles.shopPageContainer}>
-      <div className={styles.shopHeading}>
-        <span className={styles.the}>The</span>{' '}
-        <span className={styles.drop}>Drop</span>
-      </div>
+      <h2 className={styles.shopHeading}>
+        The <span>Drop</span>
+      </h2>
       <div className={styles.cardsContainer}>
         {products.map((product) => (
           <ProductCard

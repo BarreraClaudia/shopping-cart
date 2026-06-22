@@ -12,22 +12,16 @@ heading
 
 .cartHeading {
   padding: var(--spacing-lg) 0;
-}
-
-.spanOne,
-.spanTwo {
   font-family: var(--font-display);
-  display: inline-block;
   font-size: var(--font-size-hero);
   font-weight: 700;
   text-transform: uppercase;
+  line-height: 1.05;
+  word-spacing: -2rem;
 }
 
-.spanOne {
-  margin-right: var(--spacing-md);
-}
-
-.spanTwo {
+.cartHeading span {
+  display: inline-block;
   color: var(--color-accent);
 }
 
