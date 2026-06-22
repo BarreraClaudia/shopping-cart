@@ -1,0 +1,31 @@
+.footerWrapper {
+  border-top: 2px solid var(--color-grey-mid);
+  background: var(--color-grey-dark);
+}
+
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.brand span {
+  color: var(--color-accent);
+}
+
+.copy {
+  font-size: 0.7rem;
+  color: var(--color-grey-light);
+  letter-spacing: 0.08em;
+}
