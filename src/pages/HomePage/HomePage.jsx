@@ -41,31 +41,31 @@ function HomePage() {
 
       <div className={styles.marqueeWrap}>
         <div className={styles.marqueeTrack}>
-          {marqueeItemsDoubled.map((i) => (
-            <span className={styles.marqueeItem}>
+          {marqueeItemsDoubled.map((item, index) => (
+            <span className={styles.marqueeItem} key={index}>
               <span>✦</span>
-              {i}
+              {item}
             </span>
           ))}
         </div>
       </div>
 
-      <div class={styles.statsBar}>
-        <div class={styles.stat}>
-          <div class={styles.statNum}>20+</div>
-          <div class={styles.statLabel}>Products in Stock</div>
+      <div className={styles.statsBar}>
+        <div className={styles.stat}>
+          <div className={styles.statNum}>20+</div>
+          <div className={styles.statLabel}>Products in Stock</div>
         </div>
-        <div class={styles.stat}>
-          <div class={styles.statNum}>$7.95</div>
-          <div class={styles.statLabel}>Starting Price</div>
+        <div className={styles.stat}>
+          <div className={styles.statNum}>$7.95</div>
+          <div className={styles.statLabel}>Starting Price</div>
         </div>
-        <div class={styles.stat}>
-          <div class={styles.statNum}>5★</div>
-          <div class={styles.statLabel}>Avg. Rating</div>
+        <div className={styles.stat}>
+          <div className={styles.statNum}>5★</div>
+          <div className={styles.statLabel}>Avg. Rating</div>
         </div>
       </div>
 
-      <div class={styles.aboutUs}>
+      <div className={styles.aboutUs}>
         <h2>
           No Logos.
           <br />

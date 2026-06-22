@@ -13,7 +13,9 @@ function App() {
   return (
     <div className={styles.app}>
       <NavBar cartCount={totalItems} />
-      <Outlet context={{ cart, addToCart, removeFromCart, updateQuantity }} />
+      <div>
+        <Outlet context={{ cart, addToCart, removeFromCart, updateQuantity }} />
+      </div>
       <Footer />
     </div>
   );

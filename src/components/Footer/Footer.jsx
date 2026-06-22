@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div className={styles.footerWrapper}>
       <footer className={styles.footer}>
-        <div class={styles.brand}>
+        <div className={styles.brand}>
           VOID<span>.</span>
         </div>
         <div className={styles.copy}>© 2026 VOID. All rights reserved.</div>
