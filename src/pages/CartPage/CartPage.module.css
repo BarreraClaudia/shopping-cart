@@ -6,6 +6,112 @@
 
 /*
 -----------
+heading
+-----------
+*/
+
+.cartHeading {
+  padding: var(--spacing-lg) 0;
+}
+
+.spanOne,
+.spanTwo {
+  font-family: var(--font-display);
+  display: inline-block;
+  font-size: var(--font-size-hero);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.spanOne {
+  margin-right: var(--spacing-md);
+}
+
+.spanTwo {
+  color: var(--color-accent);
+}
+
+/*
+----------------------
+items & order summary
+----------------------
+*/
+
+.cartGrid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: var(--spacing-lg);
+}
+
+/* border in between cart items */
+.itemsContainer > div:not(:last-of-type) {
+  border-bottom: 1px solid var(--color-grey-light);
+}
+
+.summaryContainer {
+  position: sticky;
+  top: var(--spacing-md);
+  z-index: 99;
+
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background-color: var(--color-grey-dark);
+  border: 1px solid var(--color-grey-light);
+  border-radius: var(--border-radius);
+}
+
+.summaryTitle {
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-grey-light);
+  text-transform: uppercase;
+  font-size: var(--font-size-lg);
+}
+
+.summaryRow,
+.summaryTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summaryRow .summaryLabel {
+  color: var(--color-grey-light);
+}
+
+.summaryTotal {
+  border-top: 1px solid var(--color-accent);
+  padding-top: var(--spacing-md);
+  font-size: var(--font-size-lg);
+}
+
+.summaryTotal .summaryValue {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.checkoutBtn {
+  padding: var(--spacing-sm);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: var(--border-radius);
+  color: var(--color-white);
+  background-color: var(--color-accent);
+}
+
+.checkoutBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 102, 255, 0.3);
+  cursor: pointer;
+}
+
+/*
+-----------
 Empty Cart
 -----------
 */
@@ -28,4 +134,16 @@ Empty Cart
 .emptyCart p {
   color: var(--color-accent);
   font-size: var(--font-size-lg);
+}
+
+/*
+-----------
+media query
+-----------
+*/
+
+@media screen and (max-width: 800px) {
+  .cartGrid {
+    grid-template-columns: 1fr;
+  }
 }

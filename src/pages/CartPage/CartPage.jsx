@@ -17,20 +17,54 @@ function CartPage() {
     );
   }
 
+  const subtotal = cart.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0,
+  );
+
   return (
     <div className={styles.cartPageContainer}>
-      {cart.map((product) => (
-        <CartItem
-          key={product.id}
-          id={product.id}
-          image={product.image}
-          title={product.title}
-          price={product.price}
-          quantity={product.quantity}
-          onRemoveFromCart={removeFromCart}
-          onUpdateQuantity={updateQuantity}
-        />
-      ))}
+      <div className={styles.cartHeading}>
+        <span className={styles.spanOne}>Your</span>{' '}
+        <span className={styles.spanTwo}>cart</span>
+      </div>
+      <div className={styles.cartGrid}>
+        <div className={styles.itemsContainer}>
+          {cart.map((product) => (
+            <CartItem
+              key={product.id}
+              id={product.id}
+              image={product.image}
+              title={product.title}
+              price={product.price}
+              quantity={product.quantity}
+              onRemoveFromCart={removeFromCart}
+              onUpdateQuantity={updateQuantity}
+            />
+          ))}
+        </div>
+        <div className={styles.summaryContainer}>
+          <span className={styles.summaryTitle}>Order Summary</span>
+          <div className={styles.summaryRow}>
+            <span className={styles.summaryLabel}>Subtotal</span>
+            <span
+              className={styles.summaryValue}
+            >{`$${subtotal.toFixed(2)}`}</span>
+          </div>
+          <div className={styles.summaryRow}>
+            <span className={styles.summaryLabel}>Shipping</span>
+            <span className={styles.summaryValue}>Free</span>
+          </div>
+          <div className={styles.summaryTotal}>
+            <span className={styles.summaryLabel}>Total</span>
+            {/* putting subtotal here for now since i'm not actually calculating shipping */}
+            <span
+              className={styles.summaryValue}
+            >{`$${subtotal.toFixed(2)}`}</span>
+          </div>
+          <button className={styles.checkoutBtn}>Checkout</button>
+        </div>
+      </div>
     </div>
   );
 }
