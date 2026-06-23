@@ -5,6 +5,7 @@ import styles from './ProductCard.module.css';
 
 function ProductCard({ id, title, price, image, onAddToCart }) {
   const [quantity, setQuantity] = useState(1);
+  const [buttonText, setButtonText] = useState('Add to cart');
 
   function handleChange(e) {
     const val = e.target.value;
@@ -41,6 +42,13 @@ function ProductCard({ id, title, price, image, onAddToCart }) {
   function handleAddToCart() {
     const product = { id, title, price, image, quantity };
     onAddToCart(product);
+
+    setButtonText('Added ✓');
+
+    // Revert back to 'add to cart' after 2 seconds (2000 ms)
+    setTimeout(() => {
+      setButtonText('Add to cart');
+    }, 2000);
   }
 
   return (
@@ -66,7 +74,7 @@ function ProductCard({ id, title, price, image, onAddToCart }) {
           </button>
         </div>
         <button onClick={handleAddToCart} className={styles.addBtn}>
-          Add to cart
+          {buttonText}
         </button>
       </div>
     </div>
