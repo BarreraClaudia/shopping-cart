@@ -35,6 +35,17 @@ image
 }
 
 /*
+---------
+title
+---------
+*/
+
+.title {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+}
+
+/*
 ---------------
 price per item
 ---------------

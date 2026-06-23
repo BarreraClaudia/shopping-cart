@@ -51,7 +51,7 @@ function CartItem({
         <img src={image} alt={title} className={styles.img} />
       </div>
       <div>
-        <h3>{title}</h3>
+        <h3 className={styles.title}>{title}</h3>
         <p className={styles.price}>{`$${price.toFixed(2)} each`}</p>
       </div>
       <div className={styles.priceAndControls}>
